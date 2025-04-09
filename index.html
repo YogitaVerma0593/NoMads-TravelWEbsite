@@ -566,7 +566,7 @@
   <div class="contact-container">
       <div class="contact-form">
           <h2>Get in Touch</h2>
-          <form>
+          <form onsubmit="handleSubmit(event)" id="contact-form">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required>
 
@@ -581,7 +581,7 @@
       </div>
       <div class="contact-info">
           <h2>Contact Us</h2>
-          <p>Email: info@travelagency.com</p>
+          <p>Email: nomads@travelagency.com</p>
           <p>Phone: +123 456 7890</p>
           <p>Address: 123 Adventure St, Travel City, Country</p>
       </div>
@@ -653,6 +653,13 @@
     </div>
   </div>
   <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Thank you! Your booking has been received.");
+      document.getElementById("contact-form").reset();
+    }
+    </script>
 </body>
 
 </html>
